@@ -1,86 +1,75 @@
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Trivial Trivia: The Game</title>
-
-  <!-- Link to the jQuery Library -->
-  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-
-  <!-- Link to the Bootstrap Library -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <!-- Link to an sdditional CSS File -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Trivial Trivia: The Game</title>
+    <!-- Link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <!-- Link to the Bootstrap Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Link to an sdditional CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-
-  <!-- Overall Bootstrap Grid -->
-  <div class="container">
-
-    <!-- Jumbotron with Title -->
-    <div class="jumbotron">
-
-      <div class="bg"></div>
-      <div class="content">
-        <h1 class="text-center"><strong>Welcome to Trivial Trivia!</strong></h1>
-        <h2 class="text-center" id="instructions">Press the start button to begin</h2>
-        <h2 class="text-center" id="questionNumber"></h2>
-        <h2 class="text-center" id="timer"></h2>
-      </div>
-
-    </div> <!-- End Jumbotron -->
-
-    <div class="row">
-
-      <!-- Start button to start the game-->
-      <button class="startButton">Start!</button>
-
-      <!-- Left Panel (Trivia Question and Answer Choices) -->
-      <div class="col-lg-6" id="questionAnswers">
-
-        <div class="panel panel-default">
-          <div class="panel-heading panelQuestion">
-            <h3 class="panel-title text-center" id="question"></h3>
-          </div>
-
-          <div class="panel-body panelAnswer text-center">
-            <div class="option" id="option_1"></div>
-          </div>
-
-          <div class="panel-body panelAnswer text-center">
-            <div class="option" id="option_2"></div>
-          </div>
-          
-          <div class="panel-body panelAnswer text-center">
-            <div class="option" id="option_3"></div>
-          </div>
-          
-          <div class="panel-body panelAnswer text-center">
-            <div class="option" id="option_4"></div>
-          </div>
+    <!-- Overall Bootstrap Grid -->
+    <div class="container">
+        <!-- Jumbotron with Title -->
+        <div class="jumbotron">
+            <div class="bg"></div>
+            <div class="content">
+                <h1 class="text-center"><strong>Welcome to Trivial Trivia!</strong></h1>
+                <h2 class="text-center" id="instructions">Press the start button to begin</h2>
+                <h2 class="text-center" id="questionNumber"></h2>
+                <h2 class="text-center" id="timer"></h2>
+            </div>
         </div>
-
-      </div> <!-- Trivia Question and Answer Choices -->
-
-      <!-- Right Panel (Success or Fail Gify) -->
-      <div class="col-lg-6" id="gifyContainer">
-        <img src="./assets/images/question_mark.png" alt="Current game image" id="gameImage">
-        
-        <div class="panel-body text-center panelResult">
-          <div id="result"></div>
+        <!-- End Jumbotron -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Start button to start the game-->
+                <button class="startButton center-block" id="start-button">Start!</button>
+            </div>
         </div>
-
-        <div class="panel-body text-center panelReset">
-          <h2></h2>
+        <div class="row">
+            <div class="col-md-12" id="questionAnswers">
+                <div class="panel panel-default">
+                    <div class="panel-heading panelQuestion">
+                        <h3 class="panel-title text-center" id="question"></h3>
+                    </div>
+                    <div class="panel-body panelAnswer text-center">
+                        <div class="option" id="0"></div>
+                    </div>
+                    <div class="panel-body panelAnswer text-center">
+                        <div class="option" id="1"></div>
+                    </div>
+                    <div class="panel-body panelAnswer text-center">
+                        <div class="option" id="2"></div>
+                    </div>
+                    <div class="panel-body panelAnswer text-center">
+                        <div class="option" id="3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Trivia Question and Answer Choices -->
         </div>
-      </div> <!-- Success or Fail Gify -->
-
-    </div> <!-- End row -->
-
-  </div> <!-- End Bootstrap Grid -->
-
-  <script type="text/javascript" src="./assets/javascript/game.js"></script>
-
+        <div class="row">
+            <div class="col-md-6" id="right-wrong">
+                <h3 id="user-answered"></h3>
+            </div>
+            <div class="col-md-6">
+                <button class="btn" id="next-button">
+                    Go to the next question
+                </button>
+            </div>
+        </div>
+        <!-- Trivia Question and Answer Choices -->
+    </div>
+    </div>
+    <!-- End row -->
+    </div>
+    <!-- End Bootstrap Grid -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
